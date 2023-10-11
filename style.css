@@ -52,11 +52,15 @@
   }
   .carousel-item {
     display: block;
-    margin-right: 0;
+    margin-right: 0px;
     flex: 0 0 calc(100% / 4);
+    padding: 0px;
   }
   .img-wrapper {
     height: 23vw;
+  }
+  .kaki {
+    margin-top: 30px;
   }
 }
 
@@ -79,4 +83,13 @@
 .carousel-item img {
   max-width: 100%;
   min-width: 100%;
+}
+
+.terbaru {
+  padding: 0px;
+}
+
+.kaki {
+  background-color: #050404;
+  margin-top: 30px;
 }
