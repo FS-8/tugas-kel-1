@@ -1,13 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Produk</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk | Shoesworld</title>
+    <link rel="stylesheet" href="detail-produk-style.css" />
+
+    <!-- Box Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- Remix Icons  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Poppins:ital,wght@0,300;0,500;0,600;0,900;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ======================Header========================= -->
+
+    <!-- ===================Detail Produk===================== -->
+
+    <section class="section-produk">
+      <div class="image">
+        <img src="img/c21b2848-cb92-4a23-a761-fe4872618249.jpg" alt="Sepatu" id="image-primary"/>
+        <div class="image-list">
+          <img id="image-secondary"
+            src="/img/c21b2848-cb92-4a23-a761-fe4872618249.jpg"
+            alt="Sepatu"
+          />
+          <img id="image-secondary"
+            src="img/2.jpg"
+            alt="Sepatu"
+          />
+          <img id="image-secondary"
+            src="img/3.jpg"
+            alt="Sepatu"
+          />
+          <img id="image-secondary"
+            src="img/4.jpg"
+            alt="Sepatu"
+          />
+          <img id="image-secondary"
+            src="img/5.jpg"
+            alt="Sepatu"
+          />
+        </div>
+      </div>
+
+      <!-- ===================================================== -->
+
+      <div class="detail">
+        <h2 class="judul-barang" id="product-title">
+          Sepatu Ventela Reborn White Reflective
+        </h2>
+        <p>Terjual 100+ • ⭐ bintang 4.9 (105 rating)</p>
+        <span class="harga-barang" id="harga-product"><b>Rp. 379.000</b></span>
+        <hr />
+
+        <h3 class="pilih" id="pilih-warna ">Pilih Warna :</h3>
+        <div class="color-item">
+          <button id="btn-color">Putih</button>
+          <button id="btn-color">Hitam</button>
+          <button id="btn-color">Abu - Abu</button>
+        </div>
+
+        <h3 class="pilih" id="pilih-ukuran">Pilih ukuran :</h3>
+        <div class="ukuran">
+          <button id="btn-ukuran">37</button>
+          <button id="btn-ukuran">38</button>
+          <button id="btn-ukuran">39</button>
+          <button id="btn-ukuran">40</button>
+          <button id="btn-ukuran">41</button>
+          <button id="btn-ukuran">42</button>
+        </div>
+
+        <hr />
+        <h3>Deskripsi</h3>
+        <hr />
+        <p id="deskripsi-product">
+          Sepatu kanvas yang di desain elegan dengan kualitas kanvas terbaik dan
+          insol empuk tidak kempes karena memakai ultralite foam.
+        </p>
+      </div>
+
+      <!-- ===================================================== -->
+
+      <div class="card-bayar">
+        <h3>Card Pembelian</h3>
+
+        <h4>Sepatu Ventela Reborn</h4>
+        <hr />
+
+        <div class="card-stock">
+          <div class="card-stock-item">
+            <i class="bx bx-minus card-item"></i>
+            <p id="card-stock-number">1</p>
+            <i class="bx bx-plus card-item"></i>
+          </div>
+
+          <p>Stok : <b>Sisa 99</b></p>
+        </div>
+
+        <div class="total">
+          <p>Subtotal</p>
+          <span id="harga-product"><b>Rp. 379.000</b></span>
+        </div>
+
+        <div class="btn-card">
+          <a href=""><button class="btn-buy">+ Keranjang</button></a>
+          <a href=""><button class="primary">Beli Langsung</button></a>
+        </div>
+
+        <div class="icon-card-bayar">
+          <a href="">
+            <i class="bx bx-message-dots"></i>
+            <span>Chat</span>
+          </a>
+          <a href="">
+            <i class="bx bx-heart"></i>
+            <span>Wistlist</span>
+          </a>
+          <a href="">
+            <i class="bx bxs-share-alt"></i>
+            <span>Share</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

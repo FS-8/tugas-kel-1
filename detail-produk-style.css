@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root{
+    --bg-color : #ffffff;
+    --text-color : #000000;
+    --main-color :  #f53fa1;
+    --other-color : #00ecff;
+    --h1-font: 2.5rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+hr{
+    border: 0.1px solid rgb(221, 218, 218);
+}
+
+/* =======================IMAGE PRODUCT============================ */
+
+.section-produk{
+    display: flex;
+    justify-content: space-between;
+    margin: 95px 70px;
+    gap: 15px;
+}
+
+.image > img{
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 3px 8px 18px #888888;
+
+}
+.image > img:hover{
+    transition: transform .5s; /* Animation */
+    transform: scale(1.1); 
+}
+
+.image-list {
+    display: flex;
+    gap: 9px;
+
+}
+
+.image-list > img{
+    border-radius: 4px;
+    width: 58px;
+    box-shadow: 5px 8px 18px #888888;
+}
+.image-list > img:is(:hover,:focus){
+    transition: transform .2s; /* Animation */
+    transform: scale(1.1); 
+}
+
+/* =======================DETAIL PRODUCT============================ */
+
+.detail{
+    width: 45%;
+}
+
+.judul-barang{
+   font-size: 25px;
+   font-weight: 900;
+}
+
+.harga-barang{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.pilih{
+    font-size: 18px;
+}
+
+#btn-color{
+    padding: 2px 18px;
+    border: 0.1px solid rgb(219, 209, 209);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all ease .55s;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+#btn-color:is(:hover,:focus){
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    transform: scale(1.1); 
+}
+#btn-ukuran:is(:hover,:focus){
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    transform: scale(1.1); 
+}
+#btn-ukuran{
+    padding: 5px 10px;
+    border: 0.1px solid rgb(219, 209, 209);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all ease .55s;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* =======================CARD PRODUCT============================ */
+
+
+.card-bayar{
+    width: 24%;
+    border: 2px solid rgb(230, 223, 223);
+    border-radius: 12px;
+    padding: 12px 18px;
+    height:50vh;
+}
+
+.card-bayar > h3{
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.title-card-bayar > b{
+    margin-bottom: 120px;
+} 
+
+.card-stock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.card-stock-item{
+    border: 0.5px solid rgb(182, 175, 175);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 2px 4px;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn-card{
+    display: grid;
+    margin-bottom: 12px;
+}
+
+.btn-buy{
+    width: 100%;
+    padding: 5px 10px;
+    border: 0.1px solid rgb(219, 209, 209);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all ease .55s;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.btn-buy:is(:hover,:focus){
+    color: rgb(0, 0, 0);
+    background-color: #ffffff; 
+    border: 0.1px solid rgb(0, 0, 0);
+    transform: scale(1.05); 
+
+}
+.primary:is(:hover,:focus){
+    border: 1px solid rgb(0, 0, 0);
+    transition: transform .2s; /* Animation */
+    transform: scale(1.05); 
+}
+.primary{
+    width: 100%;
+    padding: 5px 10px;
+    border: 0.1px solid rgb(219, 209, 209);
+    border-radius: 5px;;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all ease .55s;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.icon-card-bayar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card-item:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+    font-weight: 700;
+}
+.icon-card-bayar i{
+    vertical-align: middle;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.icon-card-bayar a{
+    font-weight: 700;
+    color: #000000;
+    border-right: 0.5px solid rgb(196, 196, 212);
+    padding-right: 8px;
+}
