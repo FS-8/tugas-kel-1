@@ -1,0 +1,43 @@
+.hero {
+  margin-top: 1em;
+}
+
+.tombol {
+  width: 10em;
+  margin-left: 0.9em;
+  background-color: #893168;
+  color: #eaeaea;
+  border-radius: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.tombol:hover {
+  background-color: #050404;
+  color: #eaeaea;
+  transition: 1s;
+}
+
+.gambar-kanan {
+  align-items: center;
+}
+
+.gambar-kanan img {
+  width: 25em;
+}
+/* layout mobile */
+@media screen and (max-width: 760px) {
+  .gambar-kanan {
+    display: none;
+  }
+  .bag-kiri {
+    padding: 2em 1em;
+  }
+}
+
+/* layout website */
+@media screen and (min-width: 1400px) {
+  .hero {
+    margin-top: 5em;
+  }
+}
