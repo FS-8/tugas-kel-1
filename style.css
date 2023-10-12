@@ -1,7 +1,27 @@
-.hero {
-  margin-top: 1em;
+.navbar {
+  background-color: white;
+  border-bottom: #050404 1px solid;
 }
 
+.nav-item a {
+  color: #050404;
+}
+
+#tombol-regis {
+  background-color: #050404;
+  color: #eaeaea;
+  border-radius: 30px;
+}
+
+#tombol-regis:hover {
+  background-color: #893168;
+  color: #eaeaea;
+  transition: 0.5;
+}
+
+.hero {
+  margin-top: 5em;
+}
 .tombol {
   width: 10em;
   margin-left: 0.9em;
@@ -34,6 +54,9 @@
   .bag-kiri {
     padding: 2em 1em;
   }
+  .hero {
+    margin-top: 2em;
+  }
 }
 
 /* layout website */
@@ -43,6 +66,9 @@
   }
   #produk-terbaru {
     margin-top: 30px;
+  }
+  #tombol-regis {
+    margin-left: 10px;
   }
 }
 
