@@ -21,6 +21,7 @@
 
 .hero {
   margin-top: 5em;
+  margin-bottom: 1em;
 }
 .tombol {
   width: 10em;
@@ -118,4 +119,21 @@
 .kaki {
   background-color: #050404;
   margin-top: 30px;
+}
+
+.btn-produk {
+  background-color: #893168;
+  color: #eaeaea;
+}
+
+.btn-produk:hover {
+  background-color: #050404;
+  color: #eaeaea;
+  transition: 1s;
+}
+
+/* produk */
+
+#list-sepatu {
+  margin-top: 5em;
 }
