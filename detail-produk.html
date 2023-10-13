@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Produk | Shoesworld</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- CSS Custom -->
+
     <link rel="stylesheet" href="detail-produk-style.css" />
 
     <!-- Box Icons -->
@@ -30,40 +36,47 @@
   <body>
     <!-- ======================Header========================= -->
 
+    <header>
+      <section id="navbar fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              Shoes World
+            </a>
+            <ul class="nav justify-content-end navbar-nav collapse navbar-collapse" id="navbarTogglerDemo03">
+              <li class="nav-item pilihan-nav">
+                <a class="nav-link" aria-current="page" href="index.html" style="color: #050404">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pilihan-nav" href="produk.html" style="color: #050404">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pilihan-nav" href="#" style="color: #050404">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <button id="tombol-regis" class="btn" type="submit">Get Started</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+
     <!-- ===================Detail Produk===================== -->
 
     <section class="section-produk">
       <div class="image">
         <img src="img/c21b2848-cb92-4a23-a761-fe4872618249.jpg" alt="Sepatu" id="image-primary"/>
-        <div class="image-list">
-          <img id="image-secondary"
-            src="/img/c21b2848-cb92-4a23-a761-fe4872618249.jpg"
-            alt="Sepatu"
-          />
-          <img id="image-secondary"
-            src="img/2.jpg"
-            alt="Sepatu"
-          />
-          <img id="image-secondary"
-            src="img/3.jpg"
-            alt="Sepatu"
-          />
-          <img id="image-secondary"
-            src="img/4.jpg"
-            alt="Sepatu"
-          />
-          <img id="image-secondary"
-            src="img/5.jpg"
-            alt="Sepatu"
-          />
-        </div>
       </div>
 
       <!-- ===================================================== -->
 
       <div class="detail">
-        <h2 class="judul-barang" id="product-title">
-          Sepatu Ventela Reborn White Reflective
+        <h2 class="judul-barang" id="judul-barang">
+          Sepatu Ventela Reborn 
         </h2>
         <p>Terjual 100+ • ⭐ bintang 4.9 (105 rating)</p>
         <span class="harga-barang" id="harga-product"><b>Rp. 379.000</b></span>
@@ -89,9 +102,9 @@
         <hr />
         <h3>Deskripsi</h3>
         <hr />
-        <p id="deskripsi-product">
+        <p id="deskripsi-produk">
           Sepatu kanvas yang di desain elegan dengan kualitas kanvas terbaik dan
-          insol empuk tidak kempes karena memakai ultralite foam.
+          insol empuk tidak kempes karena memakai ultralite foam. 
         </p>
       </div>
 
@@ -100,21 +113,21 @@
       <div class="card-bayar">
         <h3>Card Pembelian</h3>
 
-        <h4>Sepatu Ventela Reborn</h4>
+        <h3 id="judul-barang">Sepatu Ventela Reborn</h3>
         <hr />
 
         <div class="card-stock">
           <div class="card-stock-item">
             <i class="bx bx-minus card-item"></i>
-            <p id="card-stock-number">1</p>
+            <span id="card-stock-number">1</span>
             <i class="bx bx-plus card-item"></i>
           </div>
 
-          <p>Stok : <b>Sisa 99</b></p>
+          <span>Stok : <b>Sisa 99</b></span>
         </div>
 
         <div class="total">
-          <p>Subtotal</p>
+          <span>Subtotal</span>
           <span id="harga-product"><b>Rp. 379.000</b></span>
         </div>
 
@@ -138,8 +151,25 @@
           </a>
         </div>
       </div>
+
     </section>
 
+    <!-- SECTION FOOTER PHONE -->
+    <section class="card-bayar-phone">
+      <div class="btn-card-phone">
+        <a href="">
+          <button class="btn-chat"><i class="bx bx-message-dots"></i></button>
+        </a>
+        <a href=""><button class="btn-buy">+ Keranjang</button></a>
+        <a href=""><button class="primary">Beli Langsung</button></a>
+      </div>
+    </section>
+
+
+
+
+    <!-- ============================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
