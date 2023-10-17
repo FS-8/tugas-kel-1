@@ -49,7 +49,7 @@ hr {
 .section-produk {
   display: flex;
   justify-content: space-between;
-  margin: 110px 70px;
+  margin: 60px 45px;
   gap: 5px;
 }
 
@@ -86,8 +86,8 @@ hr {
   font-size: 18px;
 }
 
-#deskripsi-produk{
-    text-align: justify;
+#deskripsi-produk {
+  text-align: justify;
 }
 
 #btn-color {
@@ -233,7 +233,7 @@ hr {
   padding-right: 8px;
   text-decoration: none;
 }
-.btn-chat{
+.btn-chat {
   width: 100%;
   padding: 5px 10px;
   border: 0.1px solid rgb(219, 209, 209);
@@ -248,114 +248,267 @@ hr {
   align-items: center;
   vertical-align: middle;
 }
-.btn-chat:is(:hover, :focus){
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border: 0.1px solid rgb(0, 0, 0);
-    transform: scale(1.05);
+.btn-chat:is(:hover, :focus) {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 0.1px solid rgb(0, 0, 0);
+  transform: scale(1.05);
 }
-
+.btnii{
+  border: none;
+  text-decoration:none;
+  background-color: white;
+}
 
 /* ==============MEDIA QUERIES==========*/
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .card-bayar-phone{
-        display: none;
-    }
+  .card-bayar-phone {
+    display: none;
+  }
+
+  .section-checkout {
+    display: flex;
+    margin: 75px 110px;
+    justify-content: space-between;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .card-bayar{
-        display: none;
-    }
-    .card-bayar-phone{
-        position: sticky;
-        bottom:0px;
-        margin: 0px 20px ;
-        background-color: #ffffff;
-      }
-    
-      .btn-card-phone{
-        display: flex;
-        justify-content: space-between;
-      }
-      .btn-buy,.primary{
-        padding: 5px 120px;
-      }
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 120px;
+  }
+
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
 }
 @media only screen and (max-width: 992px) {
-    .card-bayar{
-        display: none;
-    }
-    .card-bayar-phone{
-        position: sticky;
-        bottom:0px;
-        margin: 0px 20px ;
-        background-color: #ffffff;
-      }
-    
-      .btn-card-phone{
-        display: flex;
-        justify-content: space-between;
-      }
-      .btn-buy,.primary{
-        padding: 5px 160px;
-      }
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 160px;
+  }
+
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 1002px) {
-    .card-bayar{
-        display: none;
-    }
-    .card-bayar-phone{
-        position: sticky;
-        bottom:0px;
-        margin: 0px 20px ;
-        background-color: #ffffff;
-      }
-    
-      .btn-card-phone{
-        display: flex;
-        justify-content: space-between;
-      }
-      .btn-buy,.primary{
-        padding: 5px 160px;
-      }
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 160px;
+  }
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
-  .section-produk{
+  .section-produk {
     display: block;
     margin: 95px 20px 0px;
   }
-  .image img{
+  .image img {
     width: 100%;
   }
 
-  .detail{
+  .detail {
     margin-top: 25px;
-    width:100%;
+    width: 100%;
   }
 
-  .card-bayar{
+  .card-bayar {
     display: none;
   }
 
-  .card-bayar-phone{
+  .card-bayar-phone {
     position: sticky;
-    bottom:0px;
-    margin: 0px 20px ;
+    bottom: 0px;
+    margin: 0px 20px;
     background-color: #ffffff;
   }
 
-  .btn-card-phone{
+  .btn-card-phone {
     display: flex;
     justify-content: space-between;
   }
-  .btn-buy,.primary{
+  .btn-buy,
+  .primary {
     padding: 5px 25px;
   }
+
+  /* ==========================CKECKOUT PAGE============================= */
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================CKECKOUT PAGE============================= */
+
+.listProduct {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 60px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  box-shadow: 0px 10px 10px #000000;
+}
+
+.imageChekout img {
+  width: 50px;
+  border-radius: 8px;
+}
+.kanan h1 {
+  font-size: 30px;
+}
+.kanan {
+  background-color: #000000;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.kanan .surat {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  border-bottom: 1px solid #383737;
+  padding-bottom: 20px;
+}
+
+.surat .grup:nth-child(-n + 3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.surat input,
+.surat select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0px 4px;
+}
+
+.totalHasil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.btn-checkout {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 2px 12px;
+  margin-top: 5px;
+  font-weight: 900;
+  border-radius: 12px;
+  transition: all ease 0.55s;
+  background-color: white;
+}
+
+.btn-checkout:hover {
+  color: white;
+  background-color: #000000;
+  border: 1px solid white;
+  transition: all ease 0.55s;
+  transform: scale(1.05);
+}
+/* ================================================= */
+.berhasil{
+  position: absolute;
+  top: -35%;
+  left: 35%;
+  background-color: #000000;
+  color: white;
+  opacity: 0;
+
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 10px;
+  border: 0.5px solid white;
+  transition: top 0ms ease-in-out 200ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+}
+.berhasil.active{
+  top: 35%;
+  opacity: 1;
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+}
+
+.berhasil i{
+  font-size: 50px;
+}
+
+.berhasil button{
+   border: none;
+   padding: 8px;
+   border-radius: 5px;
+   font-weight: 800;
+   background-color: #000000;
+   color: white;
+   border: 0.8px solid white;
 }
