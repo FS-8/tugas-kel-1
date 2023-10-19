@@ -3,6 +3,7 @@ function login(event) {
 
   const username = document.getElementById('username').value;
   const password = document.getElementById('pass').value;
+  const displayUsername = document.getElementById('username').value;
 
   const url = new URL('https://652c0692d0d1df5273ef0d3c.mockapi.io/v1/login');
   url.searchParams.append('username', username);
@@ -22,6 +23,7 @@ function login(event) {
     .then((data) => {
       if (data.length > 0 && validateLogin(username, password, data[0])) {
         console.log(data[0]);
+        sessionStorage.setItem('username', data[0].username);
         window.location.replace('index.html');
       } else {
         console.log('pass salah');
@@ -47,3 +49,8 @@ function validateLogin(username, password, data) {
 
   return true;
 }
+
+window.addEventListener('load', (event) => {
+  let username = sessionStorage.getItem('username');
+  document.getElementById('username').innerHTML = username;
+});
