@@ -273,6 +273,7 @@ hr {
     margin: 75px 110px;
     justify-content: space-between;
   }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -392,6 +393,16 @@ hr {
     margin: 75px 10px;
     justify-content: space-between;
   }
+
+  /* ======================================= */
+  .berhasil.active{
+    top: 10%;
+    left: 4%;
+    opacity: 1;
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+  }
 }
 
 /* ==========================CKECKOUT PAGE============================= */
@@ -493,6 +504,7 @@ hr {
 }
 .berhasil.active{
   top: 35%;
+  left: 30%;
   opacity: 1;
   transition: top 0ms ease-in-out 0ms,
   opacity 200ms ease-in-out 0ms,
