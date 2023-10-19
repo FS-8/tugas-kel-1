@@ -1,4 +1,4 @@
-var item = document.querySelectorAll(".carousel .carousel-item");
+var item = document.querySelectorAll('.carousel .carousel-item');
 item.forEach((e) => {
   const slide = 4;
   let next = e.nextElementSibling;
@@ -12,11 +12,11 @@ item.forEach((e) => {
   }
 });
 
-let listSepatu = document.getElementById("list-produk");
+let listSepatu = document.getElementById('list-produk');
 
 async function getDataSepatu() {
   try {
-    let respons = await fetch("https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu");
+    let respons = await fetch('https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu');
     let data = await respons.json();
 
     console.log(data);
