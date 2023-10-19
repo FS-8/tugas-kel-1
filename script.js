@@ -29,7 +29,7 @@ async function getDataSepatu() {
           <h5 class="card-title">${item.nama}</h5>
           <h6 class="card-title">Rp.${item.harga}</h6>
           <p class="card-text">${item.tag}</p>
-          <a href="#" class="btn btn-produk">Beli</a>
+          <button class="btn btn-produk" onclick='showProductDetails(${item.id})'>Beli</button>
         </div>
       </div>
         `;
