@@ -1,0 +1,526 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --main-color: #f53fa1;
+  --other-color: #00ecff;
+  --h1-font: 2.5rem;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+hr {
+  border: 0.1px solid rgb(165, 137, 137);
+  margin: 0px;
+}
+
+/* =======================HEADER============================ */
+
+.navbar {
+  background-color: white;
+  border-bottom: #050404 1px solid;
+}
+
+#tombol-regis {
+  background-color: #050404;
+  color: #eaeaea;
+  border-radius: 30px;
+}
+
+#tombol-regis:hover {
+  background-color: #893168;
+  color: #eaeaea;
+  transition: 0.5;
+}
+
+/* =======================IMAGE PRODUCT============================ */
+
+.section-produk {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 45px;
+  gap: 5px;
+}
+
+.image > img {
+  border-radius: 8px;
+  width: 335px;
+  box-shadow: 3px 20px 18px #888888;
+}
+.image > img:hover {
+  transition: transform 0.5s; /* Animation */
+  transform: scale(1.1);
+}
+
+/* =======================DETAIL PRODUCT============================ */
+
+.detail {
+  width: 45%;
+}
+.detail p {
+  margin: 0px;
+}
+.judul-barang {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0px;
+}
+
+.harga-barang {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.pilih {
+  font-size: 18px;
+}
+
+#deskripsi-produk {
+  text-align: justify;
+}
+
+#btn-color {
+  padding: 2px 18px;
+  border: 0.1px solid rgb(219, 209, 209);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.55s;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+#btn-color:is(:hover, :focus) {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+#btn-ukuran:is(:hover, :focus) {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+#btn-ukuran {
+  padding: 5px 10px;
+  border: 0.1px solid rgb(219, 209, 209);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.55s;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* =======================CARD PRODUCT============================ */
+
+.card-bayar {
+  width: 24%;
+  border: 2px solid rgb(230, 223, 223);
+  border-radius: 12px;
+  padding: 12px 18px;
+  height: 320px;
+}
+
+.card-bayar > h3 {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.card-stock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card-stock-item {
+  border: 0.5px solid rgb(182, 175, 175);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 5px;
+}
+.card-stock-item p {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.btn-card {
+  display: grid;
+  margin-bottom: 12px;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 5px 10px;
+  border: 0.1px solid rgb(219, 209, 209);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.55s;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.btn-buy:is(:hover, :focus) {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 0.1px solid rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+.primary:is(:hover, :focus) {
+  border: 1px solid rgb(0, 0, 0);
+  transition: transform 0.2s; /* Animation */
+  transform: scale(1.05);
+}
+.primary {
+  width: 100%;
+  padding: 5px 10px;
+  border: 0.1px solid rgb(219, 209, 209);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.55s;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+.icon-card-bayar {
+  display: flex;
+  justify-content: space-between;
+}
+.card-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-weight: 700;
+}
+.icon-card-bayar i {
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.icon-card-bayar a {
+  font-weight: 700;
+  color: #000000;
+  border-right: 0.5px solid rgb(196, 196, 212);
+  padding-right: 8px;
+  text-decoration: none;
+}
+.btn-chat {
+  width: 100%;
+  padding: 5px 10px;
+  border: 0.1px solid rgb(219, 209, 209);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.55s;
+  font-weight: 700;
+  margin-bottom: 2px;
+  align-items: center;
+  vertical-align: middle;
+}
+.btn-chat:is(:hover, :focus) {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 0.1px solid rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+.btnii{
+  border: none;
+  text-decoration:none;
+  background-color: white;
+}
+
+/* ==============MEDIA QUERIES==========*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card-bayar-phone {
+    display: none;
+  }
+
+  .section-checkout {
+    display: flex;
+    margin: 75px 110px;
+    justify-content: space-between;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 120px;
+  }
+
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 160px;
+  }
+
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1002px) {
+  .card-bayar {
+    display: none;
+  }
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 160px;
+  }
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .section-produk {
+    display: block;
+    margin: 95px 20px 0px;
+  }
+  .image img {
+    width: 100%;
+  }
+
+  .detail {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .card-bayar {
+    display: none;
+  }
+
+  .card-bayar-phone {
+    position: sticky;
+    bottom: 0px;
+    margin: 0px 20px;
+    background-color: #ffffff;
+  }
+
+  .btn-card-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-buy,
+  .primary {
+    padding: 5px 25px;
+  }
+
+  /* ==========================CKECKOUT PAGE============================= */
+  .section-checkout {
+    margin: 75px 10px;
+    justify-content: space-between;
+  }
+
+  /* ======================================= */
+  .berhasil.active{
+    top: 10%;
+    left: 4%;
+    opacity: 1;
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+  }
+}
+
+/* ==========================CKECKOUT PAGE============================= */
+
+.listProduct {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 60px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  box-shadow: 0px 10px 10px #000000;
+}
+
+.imageChekout img {
+  width: 50px;
+  border-radius: 8px;
+}
+.kanan h1 {
+  font-size: 30px;
+}
+.kanan {
+  background-color: #000000;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.kanan .surat {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  border-bottom: 1px solid #383737;
+  padding-bottom: 20px;
+}
+
+.surat .grup:nth-child(-n + 3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.surat input,
+.surat select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0px 4px;
+}
+
+.totalHasil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.btn-checkout {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 2px 12px;
+  margin-top: 5px;
+  font-weight: 900;
+  border-radius: 12px;
+  transition: all ease 0.55s;
+  background-color: white;
+}
+
+.btn-checkout:hover {
+  color: white;
+  background-color: #000000;
+  border: 1px solid white;
+  transition: all ease 0.55s;
+  transform: scale(1.05);
+}
+/* ================================================= */
+.berhasil{
+  position: absolute;
+  top: -35%;
+  left: 35%;
+  background-color: #000000;
+  color: white;
+  opacity: 0;
+
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 10px;
+  border: 0.5px solid white;
+  transition: top 0ms ease-in-out 200ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+}
+.berhasil.active{
+  top: 35%;
+  left: 30%;
+  opacity: 1;
+  transition: top 0ms ease-in-out 0ms,
+  opacity 200ms ease-in-out 0ms,
+  transform 200ms ease-in-out 0ms;
+}
+
+.berhasil i{
+  font-size: 50px;
+}
+
+.berhasil button{
+   border: none;
+   padding: 8px;
+   border-radius: 5px;
+   font-weight: 800;
+   background-color: #000000;
+   color: white;
+   border: 0.8px solid white;
+}
