@@ -1,11 +1,11 @@
 function register(event) {
   event.preventDefault();
 
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('pass').value;
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("pass").value;
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
   const data = {
     firstname: firstName,
     last_name: lastName,
@@ -14,13 +14,13 @@ function register(event) {
     email: email,
   };
 
-  const url = new URL('https://652c0692d0d1df5273ef0d3c.mockapi.io/v1/login');
+  const url = new URL("https://652c0692d0d1df5273ef0d3c.mockapi.io/v1/login");
 
   // console.log(url0);
 
   fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    method: "POST",
+    headers: { "content-type": "application/json" },
     body: JSON.stringify(data),
   })
     .then((res) => {
@@ -35,7 +35,7 @@ function register(event) {
       // } else {
       //   console.log('pass salah');
       // }
-      window.location.replace('index.html');
+      window.location.replace("login.html");
       console.log(data);
     })
     .catch((error) => {
