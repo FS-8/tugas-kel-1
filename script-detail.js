@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let namaBarangCard = document.getElementById("nama-barang-card");
   let hargaBarangCard = document.getElementById("harga-product-card");
   let btn = document.getElementById("btn-card");
+  let btnMobile = document.getElementById("btn-mobile");
 
   if (productData) {
     image.innerHTML = ` <img
@@ -35,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hargaBarangCard.innerHTML = `Rp. ${productData.harga}`;
     btn.innerHTML = `<button class="btn-buy">+ Keranjang</button>
     <button class="primary" onclick='checkoutDetail(${productData.id})'>Beli Langsung</button>`;
-
+    btnMobile.innerHTML = ` <a href=""><button class="btn-chat"><i class="bx bx-message-dots"></i></button></a>
+    <button class="btn-buy">+ Keranjang</button>
+    <button class="primary" onclick='checkoutDetail(${productData.id})'>Beli Langsung</button>`
   } else {
     // Handle jika data tidak ditemukan
     console.error("Data produk tidak ditemukan.");
@@ -81,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Data produk tidak ditemukan.");
   }
 });
-
 
 // *****=====================================================================***** //
 
