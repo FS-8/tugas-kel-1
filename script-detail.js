@@ -1,112 +1,142 @@
-let produk = [
-  {
-    id: 1,
-    name: "Sepatu Ventela Reborn",
-    price: 379000,
-    image: "images/1.jpg",
-    description:
-      "Sepatu kanvas yang di desain elegan dengan kualitas kanvas terbaik dan insol empuk tidak kempes karena memakai ultralite foam",
-  },
-];
+function showProductDetails(id) {
+  // Mengambil data produk dari API menggunakan fetch
+  fetch(`https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu/${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Simpan data produk di local storage agar dapat diakses pada halaman berikutnya
+      localStorage.setItem("productData", JSON.stringify(data));
 
-addDataToHTML()
-//show data in list html
-function addDataToHTML() {
-  //remove data default in html
-  let listProductHTML = document.querySelector(".section-produk");
-  listProductHTML.innerHTML = " ";
-  //add new datas
-  if (produk != null) {
-    produk.forEach((produk) => {
-      let newProduct = document.createElement("section");
-      newProduct.classList.add("section-produk");
-      newProduct.innerHTML = `<div class="image">
-            <img
-              src="${produk.image}"
-              alt="Sepatu"
-              id="image-primary"
-            />
-          </div>
-    
-          <!-- ===================================================== -->
-    
-          <div class="detail">
-            <h2 class="judul-barang" id="judul-barang">${produk.name}</h2>
-            <p>Terjual 100+ • ⭐ bintang 4.9 (105 rating)</p>
-            <span class="harga-barang" id="harga-product"><b>Rp. ${produk.price}</b></span>
-            <hr />
-    
-            <h3 class="pilih" id="pilih-warna ">Pilih Warna :</h3>
-            <div class="color-item">
-              <button id="btn-color">Putih</button>
-              <button id="btn-color">Hitam</button>
-              <button id="btn-color">Abu - Abu</button>
-            </div>
-    
-            <h3 class="pilih" id="pilih-ukuran">Pilih ukuran :</h3>
-            <div class="ukuran">
-              <button id="btn-ukuran">37</button>
-              <button id="btn-ukuran">38</button>
-              <button id="btn-ukuran">39</button>
-              <button id="btn-ukuran">40</button>
-              <button id="btn-ukuran">41</button>
-              <button id="btn-ukuran">42</button>
-            </div>
-    
-            <hr />
-            <h3>Deskripsi</h3>
-            <hr />
-            <p id="deskripsi-produk">
-            ${produk.description}
-            </p>
-          </div>
-    
-          <!-- ===================================================== -->
-    
-          <div class="card-bayar">
-            <h3>Card Pembelian</h3>
-    
-            <h3 id="judul-barang">${produk.name}</h3>
-            <hr />
-    
-            <div class="card-stock">
-            <div class="card-stock-item">
-              <button class="btnii"><i class="bx bx-minus card-item"></i></button>
-              <span id="quantity">1</span>
-              <button class="btnii"><i class="bx bx-plus card-item"></i></button>
-            </div>
-  
-    
-              <span>Stok : <b>Sisa 99</b></span>
-            </div>
-    
-            <div class="total">
-              <span>Subtotal</span>
-              <span id="harga-product"><b>Rp. ${produk.price}</b></span>
-            </div>
-    
-            <div class="btn-card">
-              <a href=""><button class="btn-buy">+ Keranjang</button></a>
-              <a href="checkout-produk.html"><button class="primary" onclick="addCart(${produk.id})">Beli Langsung</button></a>
-            </div>
-    
-            <div class="icon-card-bayar">
-              <a href="">
-                <i class="bx bx-message-dots"></i>
-                <span>Chat</span>
-              </a>
-              <a href="">
-                <i class="bx bx-heart"></i>
-                <span>Wistlist</span>
-              </a>
-              <a href="">
-                <i class="bx bxs-share-alt"></i>
-                <span>Share</span>
-              </a>
-            </div>
-          </div>`;
-      listProductHTML.appendChild(newProduct);
+      // Redirect ke halaman produk
+      window.location.href = "detail-produk.html";
+    })
+    .catch((error) => {
+      console.error("Gagal mengambil data produk dari API", error);
     });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const productData = JSON.parse(localStorage.getItem("productData"));
+
+  let image = document.getElementById("image-primary");
+  let namaBarang = document.getElementById("judul-barang");
+  let hargaBarang = document.getElementById("harga-product");
+  let deskripsiBarang = document.getElementById("deskripsi-produk");
+  let namaBarangCard = document.getElementById("nama-barang-card");
+  let hargaBarangCard = document.getElementById("harga-product-card");
+  let btn = document.getElementById("btn-card");
+
+  if (productData) {
+    image.innerHTML = ` <img
+      src="${productData.img}" />`;
+    namaBarang.innerHTML = productData.nama;
+    hargaBarang.innerHTML = `Rp. ${productData.harga}`;
+    deskripsiBarang.innerHTML = productData.tag;
+    namaBarangCard.innerHTML = productData.nama;
+    hargaBarangCard.innerHTML = `Rp. ${productData.harga}`;
+    btn.innerHTML = `<button class="btn-buy">+ Keranjang</button>
+    <button class="primary" onclick='checkoutDetail(${productData.id})'>Beli Langsung</button>`;
+
+  } else {
+    // Handle jika data tidak ditemukan
+    console.error("Data produk tidak ditemukan.");
+  }
+});
+
+function checkoutDetail(id) {
+  // Mengambil data produk dari API menggunakan fetch
+  fetch(`https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu/${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Simpan data produk di local storage agar dapat diakses pada halaman berikutnya
+      localStorage.setItem("productData", JSON.stringify(data));
+
+      // Redirect ke halaman produk
+
+      window.location.href = "checkout-produk.html";
+    })
+    .catch((error) => {
+      console.error("Gagal mengambil data produk dari API", error);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const productData = JSON.parse(localStorage.getItem("productData"));
+
+  let imageCheckout = document.getElementById("image-checkout");
+  let namaCheckout = document.getElementById("barang-checkout");
+  let hargaCheckout = document.getElementById("harga-checkout");
+  let hargaTotal = document.getElementById("harga-total-checkout");
+  let hargaSeluruh = document.getElementById("harga-seluruh");
+
+  if (productData) {
+    // ====DATA CHECKOUT
+    imageCheckout.innerHTML = ` <img
+    src="${productData.img}" />`;
+    namaCheckout.innerHTML = productData.nama;
+    hargaCheckout.innerHTML = productData.harga;
+    hargaTotal.innerHTML = productData.harga;
+    hargaSeluruh.innerHTML = productData.harga;
+  } else {
+    // Handle jika data tidak ditemukan
+    console.error("Data produk tidak ditemukan.");
+  }
+});
+
+
+// *****=====================================================================***** //
+
+document
+  .querySelector(".berhasil .close-btn")
+  .addEventListener("click", function () {
+    document.querySelector(".berhasil").classList.remove("active");
+  });
+function handleGetFormData() {
+  const name = document.getElementById("name").value;
+  const alamat = document.getElementById("alamat").value;
+  const region = document.getElementById("region").value;
+  const Number = document.getElementById("number").value;
+  const kota = document.getElementById("kota").value;
+
+  const formData = {
+    name: name,
+    alamat: alamat,
+    region: region,
+    Number: Number,
+    kota: kota,
+  };
+
+  return formData;
+}
+
+function isNumber(input) {
+  return !isNaN(input);
+}
+function validateFormData(formData) {
+  return (
+    formData &&
+    formData.alamat.trim() !== "" &&
+    formData.region.trim() !== "" &&
+    formData.kota.trim() !== "" &&
+    isNumber(formData.Number)
+  );
+}
+
+function submit() {
+  const warningDiv = document.getElementById("warning");
+
+  if (!validateFormData(handleGetFormData())) {
+    warningDiv.innerHTML = "Periksa form anda sekali lagi";
+  } else {
+    document
+      .querySelector(".btn-checkout")
+      .addEventListener("click", function () {
+        document.querySelector(".berhasil").classList.add("active");
+      });
+    warningDiv.innerHTML = "";
   }
 }
 
+document.getElementById("btn-checkout").addEventListener("click", (event) => {
+  event.preventDefault();
+  submit();
+});
