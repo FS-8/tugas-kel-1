@@ -3,8 +3,9 @@
   border-bottom: #050404 1px solid;
 }
 
-.nav-item a {
-  color: #050404;
+#tbl {
+  color: #eaeaea;
+  text-decoration: none;
 }
 
 #tombol-regis {

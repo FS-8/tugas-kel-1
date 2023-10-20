@@ -1,9 +1,22 @@
-<<<<<<< HEAD
+var item = document.querySelectorAll(".carousel .carousel-item");
+item.forEach((e) => {
+  const slide = 4;
+  let next = e.nextElementSibling;
+  for (var i; i < slide; i++) {
+    if (!next) {
+      next = item[0];
+    }
+    let clonechild = next.cloneNode(true);
+    e.appendChild(clonechild.children[0]);
+    next = next.nextElementSibling;
+  }
+});
+
 let listSepatu = document.getElementById("list-produk");
-// loop produk
+
 async function getDataSepatu() {
   try {
-    let respons = await fetch('https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu');
+    let respons = await fetch("https://652d214cf9afa8ef4b26d419.mockapi.io/sepatu");
     let data = await respons.json();
 
     console.log(data);
